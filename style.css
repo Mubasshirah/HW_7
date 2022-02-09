@@ -1,0 +1,257 @@
+.drone_frame1{
+    width: 1100px;
+    height: 400px;
+   background-color: rgb(243, 241, 241);
+    margin: auto;
+    position: relative;
+    
+}
+.drone_1,
+.drone_2,
+.drone_3{
+    
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition-duration: 1s;
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+.drone_1{
+    left: 100px;
+   opacity: 1;
+}
+.drone_2{
+    left: 400px;
+    transition-delay: .5s;
+    transition-timing-function:ease-in ;
+}
+.drone_3{
+    left: 700px;
+    transition-delay: 1s;
+    transition-timing-function: ease-in;
+}
+
+.drone_frame1:hover .drone_2,
+.drone_frame1:hover .drone_3{
+    opacity: 1;
+}
+
+/* drone_frame2 */
+.drone_frame2{
+    width: 1100px;
+    height: 400px;
+   background-color: rgb(243, 241, 241);
+    margin: auto;
+    position: relative;
+    
+}
+.drone_11,
+.drone_22,
+.drone_33{
+    
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition-duration: .5s;
+ transition-timing-function: linear;
+}
+.drone_11{
+     left: 0px; 
+   opacity: 1;
+  
+   z-index: 1;
+  
+}
+.drone_22{
+    left: 0px;
+    transition-delay: .3s;
+    
+    z-index: 2;
+  
+    
+}
+.drone_33{
+    left: 300px; 
+    transition-delay: .7s;
+   transition-timing-function: cubic-bezier(.3,-2,.3,2);
+    z-index: 3;
+
+ 
+}
+.drone_frame2:hover .drone_22{
+    left: 300px;
+   opacity: 1;
+}
+.drone_frame2:hover .drone_33{
+    left: 600px;
+  opacity: 1;
+}
+/* drone_frame3 */
+.drone_frame3{
+    width: 1100px;
+    height: 500px;
+   background-color: rgb(243, 241, 241);
+    margin: auto;
+    position: relative;
+    
+}
+.main_drone{
+    position: absolute;
+    width: 600px;
+    height: 400px;
+    top: 50px;
+    left: 250px;
+    opacity: 1;
+    
+   
+  
+  
+}
+
+.part1,
+.part2,
+.part3,
+.part4{
+    position: absolute;
+    width: 240px;
+    height: 150px;
+    top: 150px;
+    
+    opacity: 0;
+    transition-duration:.5s;
+   left:300px;
+   transform: scale(0);
+  
+    
+    
+    
+}
+
+
+.part1::after,
+.part2::after,
+.part3::after,
+.part4::after{
+    content: '';
+    position: absolute;
+    height: 1px;
+
+
+border-top: 3px dashed rgb(71, 65, 65);
+left: 0px;
+top: 50px;
+
+}
+.part1::after{
+    transform: rotate(10deg);
+    left: 190px;
+    top: 120px;
+    width: 250px;
+}
+.part2::after{
+    transform: rotate(-10deg);
+    left: -140px;
+    top: 120px;
+    width: 210px;
+}
+.part3::after{
+    transform: rotate(0deg);
+    left: 200px;
+    top: 70px;
+    width: 230px;
+}
+.part4::after{
+    transform: rotate(-0deg);
+    left: -120px;
+    top: 70px;
+    width: 180px;
+}
+ .drone_frame3:hover .part1{
+    top: 50px;
+    left: 0px;
+    transform: scale(1);
+    opacity: 1;
+    transition-timing-function: cubic-bezier(.3,-2,.3,2);
+}
+.drone_frame3:hover .part2{
+    top: 50px;
+    left: 800px;
+    transform: scale(1);
+    opacity: 1;
+    transition-timing-function: cubic-bezier(.3,-2,.3,2);
+}
+.drone_frame3:hover .part3{
+    top:300px ;
+    left: 0px;
+    transform: scale(1);
+    opacity: 1;
+    transition-timing-function: cubic-bezier(.3,-2,.3,2);
+}
+.drone_frame3:hover .part4{
+    top: 300px;
+    left: 800px;
+    transform: scale(1);
+    opacity: 1;
+    transition-timing-function: cubic-bezier(.3,-2,.3,2);
+} 
+.rotate_frame{
+    width: 1100px;
+    height: 500px;
+   background-color: rgb(243, 241, 241);
+    margin: auto;
+    position: relative; 
+} 
+.rotate,
+.rotate1,
+.rotate2,
+.rotate3{
+    position: absolute;
+    width: 240px;
+    height: 240px;
+    top: 150px;
+    
+    
+   left:300px;
+   
+}
+.rotate{
+    left: 50px;
+      animation: rotate 2s linear infinite; 
+}
+.rotate1{
+    left: 300px;
+      animation: rotate1 4s linear infinite; 
+}
+.rotate2{
+    left: 550px;
+      animation: rotate 2s linear infinite; 
+}
+.rotate3{
+    left: 800px;
+      animation: rotate1 4s linear infinite; 
+}
+  @keyframes rotate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+  @keyframes rotate1{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(-360deg);
+    }
+}
